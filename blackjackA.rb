@@ -100,16 +100,27 @@ while dealer_total_cards < 17
   dealer_total_cards = calculate_total(dealer_cards)
   puts "Dealer new total is #{dealer_total_cards} ."
   if dealer_total_cards > 21
-    puts "Dealer Busted, you win!"
-    break 
+    puts "Dealer Busted, you win!" 
+    exit
+  end
+  if dealer_total_cards > my_total_cards
+    puts "Sorry, the dealer wins!"
+  else
+    puts "Congratulations, you played a tough game and came out the winner!  Bottoms up!"
+  end
+ end
+
+if dealer_total_cards >= 17
+  puts "Dealer is staying with a total of #{dealer_total_cards}"
+  if dealer_total_cards > my_total_cards
+    puts "Sorry, the dealer wins!"
+  else
+    puts "Congratulations, you played a tough game and came out the winner!  Bottoms up!"
   end
 end
 
-if dealer_total_cards > my_total_cards
-  puts "Sorry, the dealer wins!"
-else
-  puts "Congratulations, you played a tough game and came out the winner!  Bottoms up!"
-end
+
+
 
 
 
